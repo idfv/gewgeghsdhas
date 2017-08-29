@@ -80,19 +80,34 @@ document.writeln(navigator.userAgent);
 <script type="text/javascript">
 	document.write(navigator.app);
 	document.write("<br />");
+	document.write("<br />");
 	document.write(navigator.appName);
+	document.write("<br />");
 	document.write("<br />");
 	document.write(navigator.appCodeName);
 	document.write("<br />");
+	document.write("<br />");
 	document.write(navigator.appVersion);
+	document.write("<br />");
 	document.write("<br />");
 	document.write(navigator.platform);
 	document.write("<br />");
+	document.write("<br />");
 	document.write(navigator.userAgent);
+	document.write("<br />");
 	document.write("<br />");
 </script>
 
 
+
+<script type="text/javascript">
+	var ua = navigator.userAgent.toLowerCase();
+	function isWechat() {
+		return (ua.indexOf("micromessenger") > -1);
+	}
+
+	document.write("Wechat: " + isWechat());
+</script>
 
 
 
