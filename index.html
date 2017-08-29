@@ -102,84 +102,20 @@ document.writeln(navigator.userAgent);
 
 
 
-<script type="text/javascript">
+
+<script>
+
+	var hideTopAd = true;
 	var ua = navigator.userAgent.toLowerCase();
-	function checkUA(name) {
-		return (ua.indexOf(name) > -1);
-	}
-	function isWechat() {
-		return checkUA("micromessenger");
-	}
-	function isQQ() {
-		return checkUA("qq");
-	}
-	
-
-	document.write("Wechat: " + isWechat());
-	document.write("QQ: " + isQQ());
-
-
-</script>
-
-
-<script>
-	function isHideTopAd() {
-		var arr = new Array("micromessenger", "qq", "weibo");
-		for (idx in arr) {
-			if (ua.indexOf(arr[idx]) > -1) {
-				return true;
-			}
-		}
-		return false;
-	}
-	document.write("<br /><br />is: "+isHideTopAd());
-</script>
-
-
-
-<script>
-	$(
-		function isHideTopAd111() {
-		var arr = new Array("micromessenger", "qq", "weibo");
-		for (idx in arr) {
-			if (ua.indexOf(arr[idx]) > -1) {
-				return true;
-			}
-		}
-		document.write("no fonnd");
-		return false;
-	}
-
-	if (true) {}
-
-	// if (isHideTopAd111()) {
-	// 	document.write("ffff");
-	// }else{
-	// 	document.write("fsdasf");
-	// }
-
-// 	if (isHideTopAd111()) {
-// 		document.write("isssss");
-// 	}else{
-// 		document.write("not issssss");
-// }
-		);
-</script>
-
-
-
-
-<script>
-	var showTopAd = false;
 	var arr = new Array("micromessenger", "qq", "weibo");
 	for (idx in arr) {
-			if (ua.indexOf(arr[idx]) > -1) {
-				showTopAd = true;
+		if (ua.indexOf(arr[idx]) > -1) {
+				hideTopAd = false;
 				break;
-			}
+		}
 	}
-	document.write("||||||||adsffdL: " + showTopAd);
 
+	document.write("hide: " + hideTopAd);
 </script>
 
 
