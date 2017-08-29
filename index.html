@@ -122,10 +122,15 @@ document.writeln(navigator.userAgent);
 
 <script type="text/javascript">
 	function isHideTopAd() {
-		var ua = navigator.userAgent.toLowerCase();
-		return (ua.indexOf("micromessenger") > -1 || ua.indexOf("qq") > -1);
+		var arr = new Array("micromessenger", "qq", "weibo");
+		for (idx in arr) {
+			if (ua.indexOf(arr[idx]) > -1) {
+				return true;
+			}
+		}
+		return false;
 	}
-	document.write("asdfasdfsadfasdf: "+isHideTopAd());
+	document.write("<br /><br />is: "+isHideTopAd());
 </script>
 
 
