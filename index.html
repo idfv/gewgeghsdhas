@@ -102,11 +102,30 @@ document.writeln(navigator.userAgent);
 
 <script type="text/javascript">
 	var ua = navigator.userAgent.toLowerCase();
-	function isWechat() {
-		return (ua.indexOf("micromessenger") > -1);
+	function checkUA(name) {
+		return (ua.indexOf(name) > -1);
 	}
+	function isWechat() {
+		return checkUA("micromessenger");
+	}
+	function isQQ() {
+		return checkUA("qq");
+	}
+	
 
 	document.write("Wechat: " + isWechat());
+	document.write("QQ: " + isQQ());
+
+
+</script>
+
+
+<script type="text/javascript">
+	function isHideTopAd() {
+		var ua = navigator.userAgent.toLowerCase();
+		return (ua.indexOf("micromessenger") > -1 || ua.indexOf("qq") > -1);
+	}
+	document.write("asdfasdfsadfasdf: "+isHideTopAd());
 </script>
 
 
