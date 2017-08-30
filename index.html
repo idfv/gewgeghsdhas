@@ -2,33 +2,67 @@
 <html>
 <head>
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
-<script src="http://m.bjx.com.cn/static/wap/js/jquery-1.9.1.min.js"></script>
-<!-- <img src="http://photocdn.sohu.com/20110918/Img319696877.jpg"> -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div style="display:none;"><img src="https://www.apple.com/cn/home/images/og_wechat.jpg" alt=""/></div>
-	<title>Hello GitHub</title>
-	<style type="text/css">
-	* {
-		/*width: 100%;*/
-		background-color: #eeeeee;
-		text-align: center;
-		font: sans-serif;
-		/*font-size: 20pt;*/
-		/*font-size: 20px;*/
-		/*font-size: 1.3em;*/
-	}
-	h1 {
-		font-size: 30pt;
-	}
-	</style>
-	<!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+<title>Ideal</title>
+<style type="text/css">
+* {
+	background-color: #eeeeee;
+	text-align: center;
+	font: sans-serif;
+	border-width: 1px;
+	border-color: red;
+	/* border-style: solid; */
+}
+h1 {
+	font-size: 30pt;
+}
+</style>
 </head>
 
 <body>
-<h1> A</h1>
-	<h2>I'm hosted with GP.</h2>
-	<p>e4190d1e1b9e0ab62d7be388d193f3d8</p>
-	<p></p>
-	<p><span id="busuanzi_value_page_pv"></span>／<span id="busuanzi_value_site_uv"></span>／<span id="busuanzi_value_site_pv"></span></p>
+	<div>
+			<h1></h1>
+			<h2>The people who are crazy enough to think they can change the world are the ones who do.</h2>
+			<p style="display: none">e4190d1e1b9e0ab62d7be388d193f3d8</p>
+	</div>
+
+	<div>
+			<script type="text/javascript">
+				function writeString(value1, value2) {
+					document.write(value1 + ": " + value2 + "<br />");
+				}
+
+				writeString("app", navigator.app);
+				writeString("appName", navigator.appName);
+				writeString("appCodeName", navigator.appCodeName);
+				writeString("appVersion", navigator.appVersion);
+				writeString("platform", navigator.platform);
+				writeString("userAgent", navigator.userAgent);
+			</script>
+			
+			<script>
+				var hideTopAd = true;
+				var ua = navigator.userAgent.toLowerCase();
+				var arr = new Array("micromessenger", "qq", "weibo", "safari");
+				for (idx in arr) {
+					if (ua.indexOf(arr[idx]) > -1) {
+							hideTopAd = false;
+							break;
+					}
+				}
+		
+				document.write("Social: " + !hideTopAd);
+			</script>
+	</div>
+
+	<div style="margin-top: 100px">
+		<p style="color: darkgrey; font-size: 9px;">
+				<span id="busuanzi_value_page_pv"></span>／
+				<span id="busuanzi_value_site_uv"></span>／
+				<span id="busuanzi_value_site_pv"></span>
+		</p>
+	</div>
 
 
 
@@ -36,87 +70,12 @@
 
 
 
-<script type="text/javascript">
-	// document.write(navigator.userAgent);
-	// document.write(navigator);
-	// document.write(browser.version);
-
-
-	var browser={
-    versions:function(){
-            var u = navigator.userAgent, app = navigator.appVersion;
-            return {         //移动终端浏览器版本信息
-                 trident: u.indexOf('Trident') > -1, //IE内核
-                presto: u.indexOf('Presto') > -1, //opera内核
-                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
-                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
-                iPad: u.indexOf('iPad') > -1, //是否iPad
-                webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
-            };
-         }(),
-         language:(navigator.browserLanguage || navigator.language).toLowerCase()
-}
- document.writeln("语言版本: "+browser.language);
-document.writeln(" 是否为移动终端: "+browser.versions.mobile);
-document.writeln(" ios终端: "+browser.versions.ios);
-document.writeln(" android终端: "+browser.versions.android);
-document.writeln(" 是否为iPhone: "+browser.versions.iPhone);
-document.writeln(" 是否iPad: "+browser.versions.iPad);
-document.writeln(navigator.userAgent);
 
 
 
 
-</script>
-
-<br />
-<br />
-<br />
 
 
-
-<script type="text/javascript">
-	document.write(navigator.app);
-	document.write("<br />");
-	document.write("<br />");
-	document.write(navigator.appName);
-	document.write("<br />");
-	document.write("<br />");
-	document.write(navigator.appCodeName);
-	document.write("<br />");
-	document.write("<br />");
-	document.write(navigator.appVersion);
-	document.write("<br />");
-	document.write("<br />");
-	document.write(navigator.platform);
-	document.write("<br />");
-	document.write("<br />");
-	document.write(navigator.userAgent);
-	document.write("<br />");
-	document.write("<br />");
-</script>
-
-
-
-
-<script>
-
-	var hideTopAd = true;
-	var ua = navigator.userAgent.toLowerCase();
-	var arr = new Array("micromessenger", "qq", "weibo");
-	for (idx in arr) {
-		if (ua.indexOf(arr[idx]) > -1) {
-				hideTopAd = false;
-				break;
-		}
-	}
-
-	document.write("hide: " + hideTopAd);
-</script>
 
 
 
