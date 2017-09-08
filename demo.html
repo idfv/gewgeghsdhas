@@ -29,7 +29,7 @@ table {
 
 <body>
 	<div>
-			<h1></h1>
+			<h1 onclick="window.location.assign('https://www.apple.com/')"></h1>
 			<h2>The people who are crazy enough to think they can change the world are the ones who do.</h2>
 			<p style="display: none">e4190d1e1b9e0ab62d7be388d193f3d8</p>
 	</div>
@@ -61,16 +61,39 @@ table {
 
 			<table>
 			<script>
+				// window.location.assign("https://www.apple.com/");
 				var tableArr = new Array(
 					{"navigator": "title"},
-					{"app": navigator.app},
-					{"appName": navigator.appName},
 					{"appCodeName": navigator.appCodeName},
+					{"appName": navigator.appName},
 					{"appVersion": navigator.appVersion},
+					{"authentication": navigator.authentication},
+					{"constructor": navigator.constructor},
+					{"cookieEnabled": navigator.cookieEnabled},
+					{"gamepadInputEmulation": navigator.gamepadInputEmulation},
+					{"geolocation": navigator.geolocation},
+					{"hardwareConcurrency": navigator.hardwareConcurrency},
+					{"language": navigator.language},
+					{"languages": navigator.languages},
+					{"maxTouchPoints": navigator.maxTouchPoints},
+					{"mediaDevices": navigator.mediaDevices},
+					{"mimeTypes": navigator.mimeTypes},
+					{"msManipulationViewsEnabled": navigator.msManipulationViewsEnabled},
+					{"msMaxTouchPoints": navigator.msMaxTouchPoints},
+					{"msPointerEnabled": navigator.msPointerEnabled},
+					{"onLine": navigator.onLine},
 					{"platform": navigator.platform},
+					{"plugins": navigator.plugins},
+					{"pointerEnabled": navigator.pointerEnabled},
+					{"product": navigator.product},
+					{"productSub": navigator.productSub},
+					{"serviceWorker": navigator.serviceWorker},
 					{"userAgent": navigator.userAgent},
-
-					{"window": "title"},
+					{"vendor": navigator.vendor},
+					{"vendorSub": navigator.vendorSub},
+					{"webdriver": navigator.webdriver},
+					
+					{"window.location": "title"},
 					{"location": window.location},
 					{"hash": window.location.hash},
 					{"host": window.location.host},
@@ -81,6 +104,18 @@ table {
 					{"port": window.location.port},
 					{"protocol": window.location.protocol},
 					{"search": window.location.search},
+
+					{"window": "title"},
+					{"innerWidth": window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth},
+					{"innerHeight": window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight},
+
+					{"screen": "title"},
+					{"width": screen.width},
+					{"height": screen.height},
+					{"availWidth": screen.availWidth},
+					{"availHeight": screen.availHeight},
+					// {"": },
+					// {"": },
 
 					{"Ad": "title"},
 					{"hide": hideTopAd},
