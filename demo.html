@@ -25,6 +25,15 @@ h2 {
 	/* font-size: 1.5em; */
 	/* font-size: 20; */
 }
+table, tr, td, th {
+	text-align: left;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	padding: 5px;
+}
+table {
+	width: 100%;
+}
 </style>
 </head>
 
@@ -35,33 +44,73 @@ h2 {
 			<p style="display: none">e4190d1e1b9e0ab62d7be388d193f3d8</p>
 	</div>
 
-	<div style="padding-top: 30px">
-			<script type="text/javascript">
-				function writeString(value1, value2) {
-					document.write(value1 + ": " + value2 + "<br />");
-				}
+	<div style="padding-top: 30px; margin-left: 10%; margin-right: 10%;">
 
-				writeString("app", navigator.app);
-				writeString("appName", navigator.appName);
-				writeString("appCodeName", navigator.appCodeName);
-				writeString("appVersion", navigator.appVersion);
-				writeString("platform", navigator.platform);
-				writeString("userAgent", navigator.userAgent);
-			</script>
-			
 			<script>
 				var hideTopAd = true;
 				var ua = navigator.userAgent.toLowerCase();
-				var arr = new Array("micromessenger", "qq", "weibo", "safari");
+				var arr = new Array("micromessenger", "qq", "weibo");
 				for (idx in arr) {
 					if (ua.indexOf(arr[idx]) > -1) {
 							hideTopAd = false;
 							break;
 					}
 				}
-		
-				document.write("Social: " + !hideTopAd);
+
+				if (ua.indexOf("android") > -1) {
+					if (ua.indexOf("browser") > -1) {
+						hideTopAd = false;
+					}
+				}else{
+					if (ua.indexOf("safari") > -1) {
+						hideTopAd = false;
+					}
+				}
 			</script>
+
+
+			<table>
+			<script>
+				var tableArr = new Array(
+					{"navigator": "title"},
+					{"app": navigator.app},
+					{"appName": navigator.appName},
+					{"appCodeName": navigator.appCodeName},
+					{"appVersion": navigator.appVersion},
+					{"platform": navigator.platform},
+					{"userAgent": navigator.userAgent},
+
+					{"window": "title"},
+					{"location": window.location},
+					{"hash": window.location.hash},
+					{"host": window.location.host},
+					{"hostname": window.location.hostname},
+					{"href": window.location.href},
+					{"origin": window.location.origin},
+					{"pathname": window.location.pathname},
+					{"port": window.location.port},
+					{"protocol": window.location.protocol},
+					{"search": window.location.search},
+
+					{"Ad": "title"},
+					{"hide": hideTopAd},
+					);
+
+				for (idx in tableArr) {
+					document.write("<tr>");
+					var dic = tableArr[idx];
+					for (key in dic) {
+						if (dic[key] == "title") {
+							document.write("<td colspan='2' style='background-color: #ccc'>" + key + "</td>");
+						}else{
+							document.write("<td>" + key + "</td>");
+							document.write("<td>" + dic[key] + "</td>");
+						}
+					}
+					document.write("</tr>");
+				}
+			</script>
+			</table>
 	</div>
 
 	<div style="margin-top: 100px">
