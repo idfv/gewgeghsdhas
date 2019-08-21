@@ -4,6 +4,14 @@
 	<title>wallet</title>
 </head>
 <body>
-	<a href="aaa.pkpass" type="application/vnd.apple.pkpass">download</a>
+	<script type="text/javascript">
+	function download(href, title) {
+		const a = document.createElement('a')
+		a.setAttribute('href', href)
+		a.setAttribute('type', title)
+		a.click();
+	}
+	download('aaa.pkpass', 'application/vnd.apple.pkpass')
+</script>
 </body>
 </html>
